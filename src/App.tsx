@@ -1,26 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import Helmet from "react-helmet";
+import Navbar from "./core/components/navbar.component";
+import {PublicRoutes} from "./public/public-routes";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Helmet>
+        <title>Main</title>
+        <meta name="description" content="The main react page"/>
+        <meta name="keywords" content="key, word"/>
+      </Helmet>
+
+      <Navbar links={PublicRoutes}/>
+
+      <div style={{ height: "1000px" }}>
+        Test
+      </div>
+    </React.Fragment>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,5 @@
+.img-brand {
+ @extend .img-fluid;
+ width: 80px !important;
+ padding-left: 0.5rem;
+}
